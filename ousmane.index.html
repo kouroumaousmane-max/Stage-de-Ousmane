@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Promotion Web de Seconde - Bootcamp</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== VARIABLES DE THÈME (Par défaut : Mode Clair) ===== */
+    :root {
+      --bg-global: #f8fafc;
+      --bg-container: #ffffff;
+      --text-color: #0f172a;
+      --btn-bg: rgba(0, 0, 0, 0.08);
+      --btn-color: #0f172a;
+      --btn-border: rgba(0, 0, 0, 0.15);
+      --shadow: rgba(0, 0, 0, 0.08);
+    }
+
+    /* ===== MODE SOMBRE ===== */
+    body.dark-theme {
+      --bg-global: #0f172a;
+      --bg-container: #1e293b;
+      --text-color: #f8fafc;
+      --btn-bg: rgba(255, 255, 255, 0.2);
+      --btn-color: #ffffff;
+      --btn-border: rgba(255, 255, 255, 0.3);
+      --shadow: rgba(0, 0, 0, 0.3);
+    }
+
+    /* ===== STYLES GLOBAUX ===== */
+    html, body {
+      background-color: var(--bg-global);
+      color: var(--text-color);
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    header h1, header p {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* ===== BOUTON THÈME THÈME CLAIR/SOMBRE ===== */
+    .theme-toggle-container {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    .theme-btn {
+      background-color: var(--btn-bg);
+      color: var(--btn-color);
+      border: 2px solid var(--btn-border);
+      padding: 0.6rem 1.2rem;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .theme-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--shadow);
+    }
+
+    .theme-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Fond des conteneurs appliqués dynamiquement */
+    .welcome-section, .student-card {
+      background-color: var(--bg-container);
+      color: var(--text-color);
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 800px;
+      box-shadow: 0 4px 6px var(--shadow);
+    }
+
+    /* Grille pour la semaine 2 */
+    .grid-portfolios {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+
+    .student-card {
+      margin: 0;
+    }
+
+    /* Alignements */
+    .welcome-section h2,
+    .timeline-container h3,
+    .day-log h4,
+    .day-log p,
+    .student-card h3, 
+    .student-avatar,
+    .student-bio {
+      text-align: center !important;
+    }
+
+    .btn-secondary {
+      display: block;
+      width: fit-content;
+      margin: 10px auto;
+      padding: 0.5rem 1rem;
+      background-color: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="ousmane.html" style="color: var(--text-color); margin: 10px; display: inline-block;">← Retour à l'accueil</a>
+    <div class="theme-toggle-container">
+      <button id="theme-toggle" class="theme-btn">🌙 Mode Sombre</button>
+    </div>
+    <h1 style="text-align: center;">🚀 Mon Projet Promotion Web</h1>
+    <h2 style="text-align: center; font-size: 1.2rem; font-weight: normal;">Ce site Web représente tout ce que j'ai fait durant mon stage de seconde à Epitech de Lille</h2>
+  </header>
+
+  <main>
+    <section class="welcome-section">
+      <h2 class="welcome-title">Bienvenue sur la page Web de Ousmane !</h2>
+      
+      <div class="timeline-container">
+        <h3> Journal de bord de mon stage (Semaine 1)</h3>
+
+        <div class="day-log">
+          <h4>Jour 1 : Découverte et Lancement</h4>
+          <p>Le premier jour de mon stage, nous avons assisté à la présentation du programme...</p>
+        </div>
+
+        <div class="day-log">
+          <h4>Jour 2 : Portfolios, Cybersécurité et OSINT</h4>
+          <p>Dès la deuxième journée, nous avons finalisé le travail sur nos portfolios et ensuite la la cybertsecurité
+            et Osint ...</p>
+           <img src="Osint.jpg" alt="Illustration de programmation web" style="display: block; margin:
+       20px auto; max-width: 100%; border-radius: 8px;" height="300">
+       <p>
+        Osint, nous avons appris à utiliser des outils d'OSINT pour collecter des informations
+         sur des cibles fictives. C'était fascinant de voir comment les données publiques
+          peuvent être utilisées pour créer un profil détaillé d'une personne ou d'une organisation. 
+          
+        Nous avons également discuté des implications éthiques et légales de l'OSINT, 
+        ce qui a été très instructif.
+       </p>
+        </div>
+
+        <div class="day-log">
+          <h4>Jour 3 : Python, IA et Algorithmie</h4>
+          <p>Pour la troisième journée, nous avons débuté avec un jeu sérieux appelé "Leek Wars"...</p>
+          <img src="python.jpg" alt="Illustration de programmation web" style="display: block; margin:
+       20px auto; max-width: 100%; border-radius: 8px;" height="300">
+       <p> nous permet de garder la trace des bogues dans le code du logiciel. 
+        Créer automatiquement le logiciel. Gérer les projets de logiciels.</p>
+        </div>
+
+        <div class="day-log">
+          <h4>Jour 4 : Atelier des Canards et Méthodologie</h4>
+          <p>Durant cette quatrième journée, nous avons participé à l'Atelier des Canards...</p>
+        </div>
+      </div>
+
+      <img src="code.png" alt="Illustration de programmation web" style="display: block; margin:
+       20px auto; max-width: 100%; border-radius: 8px;" height="300">
+    </section>
+
+    <section class="grid-portfolios">
+      <article class="student-card">
+        <div class="student-avatar">💬</div>
+        <h3 class="student-name">Semaine 2 - Jour 1</h3>
+        <p class="student-bio"><strong>Matin :</strong> Témoignages des étudiants.<br><strong>Après-midi :</strong> Revue du portfolio.</p>
+        <a href="#" class="btn-secondary">En savoir plus...</a>
+      </article>
+
+      <article class="student-card">
+        <div class="student-avatar"></div>
+        <h3 class="student-name">Semaine 2 - Jour 2</h3>
+        <p class="student-bio"><strong>Matin :</strong> Conférences NASA et Google.<br><strong>Après-midi :</strong> Jeu Morpion avec IA.</p>
+        <a href="#" class="btn-secondary">En savoir plus...</a>
+      </article>
+
+      <article class="student-card">
+        <div class="student-avatar"></div>
+        <h3 class="student-name">Semaine 2 - Jour 3</h3>
+        <p class="student-bio"><strong>Matin :</strong> Conférence Stormshield.<br><strong>Après-midi :</strong> Jeu Snake en JS.</p>
+        <a href="#" class="btn-secondary">En savoir plus...</a>
+      </article>
+
+      <article class="student-card">
+        <div class="student-avatar"></div>
+        <h3 class="student-name">Semaine 2 - Jour 4</h3>
+        <p class="student-bio"><strong>Matin :</strong> Présentation orientation.<br><strong>Après-midi :</strong> Finalisation.</p>
+        <a href="index.html" class="btn-secondary">Arena de Kankan site sportif et familial.</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 - Conçu avec ❤️ lors du stage de Seconde</p>
+  </footer>
+
+  <script src="ousmane.script.js"></script>
+</body>
+</html>

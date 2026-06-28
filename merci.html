@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci Epitech ! - Mon Stage de Seconde</title>
+    <style>
+        :root {
+            --epitech-blue: #002e62;
+            --epitech-cyan: #00b4ff;
+            --text-dark: #333333;
+            --bg-light: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--epitech-blue), #001530);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.2rem;
+            color: var(--epitech-cyan);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .intro-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--epitech-cyan);
+        }
+
+        h2 {
+            color: var(--epitech-blue);
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0.5rem;
+        }
+
+        .grid-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .point-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .point-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .point-card h3 {
+            margin-top: 0;
+            color: var(--epitech-cyan);
+            font-size: 1.2rem;
+        }
+
+        .conclusion {
+            background: var(--epitech-blue);
+            color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Un Grand Merci à Epitech !</h1>
+        <p>Retour sur mon stage d'observation de Seconde</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="intro-card">
+            <h2>À toute l'équipe d'Epitech,</h2>
+            <p>Je tenais à vous remercier chaleureusement pour m'avoir 
+                
+                accueilli au sein de votre établissement pour mon stage de seconde.
+                 Cette semaine d'immersion a été une expérience incroyable qui m'a permis de découvrir de l'intérieur
+                  le monde de l'informatique et du développement de manière concrète.</p>
+        </section>
+
+        <section>
+            <h2>Ce que j'ai adoré (Les points positifs)</h2>
+            
+            <div class="grid-points">
+                
+                <div class="point-card">
+                    <h3>🤝 Un accueil exceptionnel</h3>
+                    <p>Dès le premier jour, je me suis senti intégré. Tout le monde a pris le temps de m'expliquer son rôle avec patience et bienveillance.</p>
+                </div>
+
+                <div class="point-card">
+                    <h3>💡 La pédagogie par projet</h3>
+                    <p>J'ai adoré découvrir la méthode de travail d'Epitech. Apprendre en faisant et en résolvant des problèmes concrets est passionnant et très motivant.</p>
+                </div>
+
+                <div class="point-card">
+                    <h3>🚀 Une immersion technologique</h3>
+                    <p>Découvrir les coulisses des projets informatiques, les différents langages et l'univers du code m'a donné une vision beaucoup plus claire de ce secteur.</p>
+                </div>
+
+                <div class="point-card">
+                    <h3>🔥 Une super ambiance</h3>
+                    <p>L'ambiance générale à l'école est à la fois sérieuse, dynamique et très stimulante. On sent une vraie passion partagée par les étudiants et l'équipe.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="conclusion">
+            <h2>Bilan de cette expérience</h2>
+            <p>Ce stage a confirmé (ou éveillé !) mon intérêt pour le monde de la tech et du numérique. Grâce à votre écoute et à vos conseils, je repars avec des souvenirs plein la tête et des idées plus précises pour mon orientation future.</p>
+            <p><strong>Merci encore pour votre temps et votre générosité !</strong></p>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Page web créée par Ousmane un stagiaire de seconde venant du lycée Gustave Eiffel.</p>
+    </footer>
+
+</body>
+</html>
